@@ -49,10 +49,10 @@ const HomePage = () => {
               🚀 Start Practicing
             </Button>
           </Link>
-          <Link href="https://github.com/modamaan/Ai-mock-Interview" target="_blank">
+          <Link href="https://github.com/404chandan/MockAI" target="_blank">
             <Button
               variant="outline"
-              className="px-8 py-6 text-lg rounded-2xl border-white text-white hover:bg-white hover:text-black transition"
+              className="px-8 py-6 text-lg rounded-2xl border-white text-[#1d10ab] hover:bg-white hover:text-black transition"
             >
               <FaGithub className="mr-2 h-6 w-6" /> GitHub
             </Button>
@@ -63,7 +63,7 @@ const HomePage = () => {
       {/* Features Section */}
       <section className="relative z-10 py-24 px-6 md:px-16 bg-black/40 backdrop-blur-lg">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
-          Why Choose <span className="text-blue-400">AI Mock Interview?</span>
+          Why Choose <span className="text-blue-400">MOCK AI?</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -125,7 +125,7 @@ const HomePage = () => {
 
       {/* Footer */}
       <footer className="relative z-10 py-6 text-center bg-black/80 border-t border-gray-700">
-        <p className="text-gray-400 text-sm">© 2025 AI Mock Interview. Built BY CHANDAN PANDEY</p>
+        <p className="text-gray-400 text-sm">© 2025 MOCKAI BUILT BY SHINU</p>
       </footer>
     </div>
   );
