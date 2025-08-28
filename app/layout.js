@@ -34,3 +34,11 @@ export default function RootLayout({ children }) {// ROOTLAYOUT - WRAPS ALL COMP
     </ClerkProvider>
   );
 }
+
+// Global styling with Inter font + globals.css.
+
+// Authentication with Clerk.
+
+// Toasts/notifications with Sonner’s Toaster.
+
+// Theme switching with your custom ThemeProvider.

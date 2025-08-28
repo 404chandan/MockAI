@@ -9,54 +9,59 @@ import { PlusCircle, ListChecks } from "lucide-react";
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white p-10">
-      {/* Top Bar */}
-      <div className="flex justify-between items-center mb-10">
-        <motion.h1
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl font-extrabold tracking-wide"
+    <div className="min-h-screen bg-gray-50 text-gray-900 py-12">
+      {/* Container */}
+      <div className="max-w-7xl mx-auto px-8">
+        {/* Top Bar */}
+        <div className="flex justify-between items-center mb-12">
+          <motion.h1
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4 }}
+            className="text-4xl font-extrabold"
+          >
+            Dashboard
+          </motion.h1>
+
+          {/* <UserButton afterSignOutUrl="/" /> */}
+        </div>
+
+        {/* Subtitle */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.1, duration: 0.4 }}
+          className="text-lg text-gray-600 mb-12"
         >
-          Dashboard
-        </motion.h1>
+          🚀 Create and manage your AI-powered mock interviews
+        </motion.p>
 
-        <UserButton afterSignOutUrl="/" />
+        {/* Action Section */}
+        <motion.div
+          initial={{ scale: 0.95, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.4 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-10"
+        >
+          {/* Start New Interview */}
+          <div className="flex flex-col justify-between p-10 bg-white rounded-2xl border shadow-md hover:shadow-lg transition min-h-[300px]">
+            <div className="flex items-center space-x-4 mb-6">
+              <PlusCircle className="w-8 h-8 text-blue-500" />
+              <h2 className="text-2xl font-semibold">Start New Interview</h2>
+            </div>
+            <AddNewInterview />
+          </div>
+
+          {/* Your Interviews */}
+          <div className="col-span-2 flex flex-col justify-between p-15 bg-white rounded-2xl border shadow-md hover:shadow-lg transition min-h-[300px]">
+            <div className="flex items-center space-x-4 mb-6">
+              <ListChecks className="w-8 h-8 text-green-500" />
+              <h2 className="text-2xl font-semibold">Your Interviews</h2>
+            </div>
+            <InterviewList />
+          </div>
+        </motion.div>
       </div>
-
-      {/* Subtitle */}
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
-        className="text-lg text-slate-300 mb-8"
-      >
-        🚀 Create and start your AI-powered mock interviews
-      </motion.p>
-
-      {/* Action Section */}
-      <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-6 my-5"
-      >
-        <div className="p-6 bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transition-transform hover:-translate-y-1">
-          <div className="flex items-center space-x-3 mb-4">
-            <PlusCircle className="w-8 h-8 text-blue-400" />
-            <h2 className="text-xl font-bold">Start New Interview</h2>
-          </div>
-          <AddNewInterview />
-        </div>
-
-        <div className="col-span-2 p-6 bg-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transition-transform hover:-translate-y-1">
-          <div className="flex items-center space-x-3 mb-4">
-            <ListChecks className="w-8 h-8 text-green-400" />
-            <h2 className="text-xl font-bold">Your Interviews</h2>
-          </div>
-          <InterviewList />
-        </div>
-      </motion.div>
     </div>
   );
 };
